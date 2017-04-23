@@ -4,4 +4,23 @@ block variables
   - var title = 'Dmitry Markov portfolio'
 
 block content
-  include shared/_welcome
+  main
+    header
+      a.btn.btn--outline Авторизоваться
+    section
+      img(src="assets/api/user-data/images/dm-avatar.jpg")
+      h1 Дмитрий Марков
+      p Портфолио
+      ul.socials
+        each social in socials
+          li.socials__item
+            a(href=social.link class=`socials__link socials__link_${social.icon}` target="_blank")= social.name
+      nav.main-nav
+        ul
+          li
+            a(href="works.html") Мои работы
+          li
+            a(href="about.html") Обо мне
+          li
+            a(href="blog.html") Блог
+    footer &copy; Дмитрий Марков | создано для LoftSchool | 2017

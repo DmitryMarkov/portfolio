@@ -4,7 +4,10 @@
 module.exports = () => {
   $.gulp.task('pug', () => {
     return $.gulp.src($.config.src + '/templates/*.pug')
-      .pipe($.gp.pug({ pretty: true }))
+      .pipe($.gp.pug({
+        pretty: true,
+        locals: JSON.parse($.fs.readFileSync($.config.src + '/assets/api/user-data/user-data.json'))
+      }))
       .on('error', $.gp.notify.onError((error) => {
         return {
           title: 'Pug',

@@ -4,8 +4,9 @@ doctype html
 html
   head
     meta(charset="utf-8")
+    meta(http-equiv="Content-Type" content="text/html; charset=UTF-8")
     title #{title}
-    meta(content="" name="author")
+    meta(content="Dmitry Markov" name="author")
     meta(content="" name="description")
     meta(content="" name="keywords")
     meta(content="width=device-width, initial-scale=1" name="viewport")
@@ -24,4 +25,5 @@ html
     <![endif]-->
 
   body
-    block content
+    .wrapper
+      block content
