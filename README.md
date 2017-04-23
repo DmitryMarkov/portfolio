@@ -7,6 +7,6 @@ https://dmitrymarkov.github.io/portfolio/
 ### Usage
 ```bash
 npm install
-cd _<project_name>_
+cd <project_name>
 npm start
 ```
