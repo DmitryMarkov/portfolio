@@ -3,10 +3,9 @@
 
 module.exports = () => {
   $.gulp.task('watch', () => {
-    $.gulp.watch('./source/js/**/*.js', $.gulp.series('js:lint', 'js:process'))
-    $.gulp.watch('./source/style/**/*.scss', $.gulp.series('sass'))
-    $.gulp.watch('./source/template/**/*.pug', $.gulp.series('pug'))
-    $.gulp.watch('./source/images/**/*.*', $.gulp.series('copy:image'))
-    $.gulp.watch('./source/fonts/**/*.*', $.gulp.series('copy:fonts'))
+    $.gulp.watch($.config.src + '/app/**/*.js', $.gulp.series('js:lint', 'js:process'))
+    $.gulp.watch($.config.src + '/styles/**/*.sass', $.gulp.series('sass'))
+    $.gulp.watch($.config.src + '/templates/**/*.pug', $.gulp.series('pug'))
+    $.gulp.watch($.config.src + '/assets/**/*.*', $.gulp.series('copy:assets'))
   })
 }

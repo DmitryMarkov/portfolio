@@ -1,5 +1,5 @@
 'use strict'
 
 module.exports = [
-  './source/js/app.js'
+  './src/app/app.js'
 ]

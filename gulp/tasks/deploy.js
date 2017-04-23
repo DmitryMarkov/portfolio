@@ -3,7 +3,7 @@
 
 module.exports = () => {
   $.gulp.task('deploy', () => {
-    return $.gulp.src('./build/**/*')
+    return $.gulp.src($.config.root + '/**/*')
     .pipe($.gp.ghPages())
   })
 }
