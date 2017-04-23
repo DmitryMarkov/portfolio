@@ -1,9 +1,22 @@
 {
-  "name": "gulp4-boilerplate",
+  "name": "portfolio",
   "version": "1.0.0",
   "author": "Dmitry Markov",
+  "description": "Portfolio website with gulp4/pug/sass",
   "license": "ISC",
-  "scripts": {},
+  "scripts": {
+    "start": "gulp",
+    "lint": "gulp lint",
+    "build": "gulp build:dist",
+    "publish": "gulp deploy"
+  },
+  "keywords": [
+    "sass",
+    "javascript",
+    "gulp",
+    "pug",
+    "eslint"
+  ],
   "devDependencies": {
     "browser-sync": "~2.18.7",
     "del": "~2.2.2",
