@@ -1,3 +1,39 @@
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 // Mixins
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
+@mixin bernier()
+  font-family: "bernier"
+
+@mixin responsive($breakpoint)
+  @if $breakpoint == phone
+    @media (max-width: $responsive-phone)
+      @content
+  @if $breakpoint == tablet
+    @media (max-width: $responsive-tablet)
+      @content
+  @if $breakpoint == desktop
+    @media (max-width: $responsive-desktop)
+      @content
+
+@mixin center($axis: "both")
+  position: absolute
+
+  @if $axis == "both"
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+  @if $axis == "x"
+    left: 50%
+    transform: translateX(-50%)
+  @if $axis == "y"
+    top: 50%
+    transform: translateY(-50%)
+
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// Extends
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+%clerafix
+  &:after
+    content: ""
+    display: block
+    clear: both
