@@ -1,0 +1,22 @@
+{
+  "skills": [
+    "Frontend", "Backend", "Workflow"
+  ],
+  "socials": [
+    {
+      "name": "Twitter",
+      "link": "//twitter.com/damarkov",
+      "icon": "twitter"
+    },
+    {
+      "name": "GitHub",
+      "link": "//github.com/DmitryMarkov",
+      "icon": "github"
+    },
+    {
+      "name": "Behance",
+      "link": "//www.behance.net/damarkov",
+      "icon": "behance"
+    }
+  ]
+}

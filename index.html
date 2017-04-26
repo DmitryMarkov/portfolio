@@ -1,23 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Home page</title>
-    <meta content="" name="author">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Dmitry Markov portfolio</title>
+    <meta content="Dmitry Markov" name="author">
     <meta content="" name="description">
     <meta content="" name="keywords">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link rel="stylesheet" href="vendor.css">
     <link rel="stylesheet" href="main.css">
     <script src="vendor.js" defer></script>
-    <script src="app.js" defer></script><!--[if lt IE 9]>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+    <script src="app.js" defer></script>
   </head>
   <body>
-    <div class="greating">
-      <div class="greating_text">Hello! I'm your training builder.</div>
-      <div class="greating_picture"></div>
+    <div class="wrapper">
+      <main>
+        <header><a class="btn btn--outline">Авторизоваться</a></header>
+        <section><img src="assets/api/user-data/images/dm-avatar.jpg">
+          <h1>Дмитрий Марков</h1>
+          <p>Портфолио</p>
+          <ul class="socials">
+            <li class="socials__item"><a class="socials__link socials__link_twitter" href="//twitter.com/damarkov" target="_blank">Twitter</a></li>
+            <li class="socials__item"><a class="socials__link socials__link_github" href="//github.com/DmitryMarkov" target="_blank">GitHub</a></li>
+            <li class="socials__item"><a class="socials__link socials__link_behance" href="//www.behance.net/damarkov" target="_blank">Behance</a></li>
+          </ul>
+          <nav class="main-nav">
+            <ul>
+              <li><a href="works.html">Мои работы</a></li>
+              <li><a href="about.html">Обо мне</a></li>
+              <li><a href="blog.html">Блог</a></li>
+            </ul>
+          </nav>
+        </section>
+        <footer>&copy; Дмитрий Марков | создано для LoftSchool | 2017</footer>
+      </main>
     </div>
   </body>
 </html>
