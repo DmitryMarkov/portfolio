@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Blog</title>
+    <title>Блог</title>
     <meta content="Dmitry Markov" name="author">
     <meta content="" name="description">
     <meta content="" name="keywords">
@@ -15,13 +15,96 @@
     <script src="app.js" defer></script>
   </head>
   <body>
-    <div class="wrapper">
-      <h1>It's blog!</h1>
+    <div class="wrapper" id="blog">
+      <header class="header">
+        <nav class="header__nav">
+          <ul class="socials">
+            <li class="socials__item"><a class="socials__link socials__link_vk" href="//twitter.com/damarkov" target="_blank" title="Twitter">Twitter</a></li>
+            <li class="socials__item"><a class="socials__link socials__link_github" href="//github.com/DmitryMarkov" target="_blank" title="GitHub">GitHub</a></li>
+            <li class="socials__item"><a class="socials__link socials__link_in" href="//www.behance.net/damarkov" target="_blank" title="Behance">Behance</a></li>
+          </ul>
+          <ul class="nav-menu">
+            <svg class="nav-menu__icon">
+              <use xlink:href="assets/images/sprite.svg#hamburger"></use>
+            </svg>
+            <!-- each link in nav
+            // li.nav-menu__item
+              // a(href=link.url)= link.name
+            -->
+          </ul>
+        </nav>
+        <section class="hero"><img src="assets/api/user-data/images/dm-avatar.jpg">
+          <h1>Блог</h1>
+          <div class="description">Статьи, которые я написал</div>
+        </section>
+        <section class="triangles">
+          <div class="triangles__item triangles__item-left">
+            <svg class="triangles__triangle" viewbox="0 0 1000 110" preserveAspectRatio="none">
+              <polygon points="0,0 0,110 1000, 110"></polygon>
+            </svg>
+          </div>
+          <div class="triangles__item triangles__item-right">
+            <svg class="triangles__triangle" viewbox="0 0 1000 110" preserveAspectRatio="none">
+              <polygon points="0,110 1000,110 1000,0"></polygon>
+            </svg>
+          </div>
+        </section>
+      </header>
+      <div class="content">
+        <aside>
+          <ul class="side-nav">
+            <li class="side-nav__item"><a class="active" href="#first">Софт для дизайнера</a>
+            </li>
+            <li class="side-nav__item"><a href="#second">Оптимизация изображений</a>
+            </li>
+            <li class="side-nav__item"><a href="#third">Самый необходимый набор Gulp плагинов</a>
+            </li>
+            <li class="side-nav__item"><a href="#fouth">Почему я выбрал Pug</a>
+            </li>
+          </ul>
+        </aside>
+        <main>
+          <article id="first">
+            <h2>Софт для дизайнера</h2>
+            <div class="date">2017-04-27</div>
+            <div class="text"><p>Photoshop предоставляет огромное количество плагинов, которые могут облегчить ваш рабочий процесс, но мы рекомендуем использовать Sketch или Adobe XD. Эти программы совмещают преимущества использования векторной графики с простотой работы над растровыми изображениями, что особенно полезно при создании дизайна для устройств с большой плотностью пикселей. Используя Sketch или XD, вы не будете переживать о выбранных цветовых профилях, а размер рабочих файлов будет в разы меньше. В итоге вы получите много полезных функций, которые смогут ускорить рабочий процесс.</p><p>Google рекомендует использовать dash-нотацию для всех файлов, включая HTML, PDF и JPG. Вы можете посмотреть <a href='http://youtu.be/AQcSFsQyct8'>видео</a> Google Webmasters, в котором подробно объясняются причины такого выбора.</p></div>
+          </article>
+          <article id="second">
+            <h2>Оптимизация изображений</h2>
+            <div class="date">2017-04-27</div>
+            <div class="text"><p>Дизайнеры в основном считают, что оптимизация изображений — задача разработчиков. С моей точки зрения, если вы хотите увидеть максимально точно реализованные макеты, не позволяйте разработчику принимать решения, связанные с визуальной частью. Например, это касается качества изображений и степени их сжатия.</p><p>При использовании SVG вы не будете волноваться о подготовке изображений для устройств с разной плотностью пикселей, создавая версии @2x и @3x. Также не придётся создавать версии одного файла с разрешениями для разных частей сайта (к примеру, логотип в футере и в шапке может быть разного размера, но с SVG вы будете использовать один файл). Другое преимущество SVG в том, что векторная графика занимает намного меньше места и является текстом, что позволяет эффективно производить сжатие на стороне сервера с помощью gzip для последующей передачи клиенту.</p><p class='accent'>Подумайте дважды, перед тем как отправлять файлы размером больше 1МБ разработчику.</p><p>Возможно несколько сценариев. Первый: разработчик не обратит на это внимание, что негативно скажется на скорости загрузки сайта. Второй: разработчик пережмёт изображение так, что появятся артефакты, ухудшится качество, или даже поменяется цветовой профиль. Не ленитесь и не перекладывайте свою работу на плечи разработчика, потому что именно вы ответственны за визуальное качество проекта.</p></div>
+          </article>
+          <article id="third">
+            <h2>Самый необходимый набор Gulp плагинов</h2>
+            <div class="date">2017-04-27</div>
+            <div class="text">Самое важное....</div>
+          </article>
+          <article id="fouth">
+            <h2>Почему я выбрал Pug</h2>
+            <div class="date">2017-04-27</div>
+            <div class="text">Самое важное....</div>
+          </article>
+        </main>
+      </div>
       <footer class="footer">
-        <div class="footer_row">
+        <div class="footer__row">
           <nav class="footer__nav">
-            <ul>link</ul>
+            <ul class="nav-menu">
+              <li class="nav-menu__item"><a href="works.html">Мои работы</a></li>
+              <li class="nav-menu__item"><a href="about.html">Обо мне</a></li>
+              <li class="nav-menu__item"><a href="blog.html">Блог</a></li>
+              <li class="nav-menu__item"><a href="login.html">Авторизация</a></li>
+            </ul>
+            <ul class="socials">
+              <li class="socials__item"><a class="socials__link socials__link_vk" href="//twitter.com/damarkov" target="_blank" title="Twitter">Twitter</a></li>
+              <li class="socials__item"><a class="socials__link socials__link_github" href="//github.com/DmitryMarkov" target="_blank" title="GitHub">GitHub</a></li>
+              <li class="socials__item"><a class="socials__link socials__link_in" href="//www.behance.net/damarkov" target="_blank" title="Behance">Behance</a></li>
+            </ul>
           </nav>
+        </div>
+        <div class="footer__row about">
+          <div class="about__item">Я &mdash; веб-разработчик и сделал этот сайт в рамках обучения в Школе онлайн-образования LoftSchool</div>
+          <div class="about__item">&copy; Дмитрий Марков | создано для LoftSchool | 2017</div>
         </div>
       </footer>
     </div>
