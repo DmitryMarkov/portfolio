@@ -31,12 +31,16 @@ block content
     .content
       aside
         ul.side-nav
-          each article in articles
-            li.side-nav__item=article.name
+          each article, index in articles
+            li.side-nav__item
+              if index == 0
+                a(href=`#${article.hash}` class="active")=article.name
+              else
+                a(href=`#${article.hash}`)=article.name
       main
         each article in articles
-          article
+          article(id=article.hash)
             h2=article.name
             .date=article.date
             .text!=article.content
-  include shared/_footer
+    include shared/_footer

@@ -1,4 +1,7 @@
 #blog
+  .header
+    height: 375px
+
   .content
     display: flex
 
@@ -7,5 +10,18 @@
       text-align: right
 
     main
-      flex: 3
+      flex: 2
       margin-left: 50px
+      padding-bottom: 150px
+
+      article
+        margin: 0 50px
+        padding: 50px 0
+        border-bottom: 5px solid rgba($color-header, .07)
+
+        &:last-child
+          border-bottom: none
+
+      .date
+        color: $color-primary
+        margin-bottom: 16px
