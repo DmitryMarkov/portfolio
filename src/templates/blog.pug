@@ -1,8 +1,29 @@
 extends shared/_template
 
 block variables
-  - var title = 'Blog'
+  - var title = 'Блог'
 
 block content
-  h1 #{title}
+  .wrapper#blog
+    header.header
+      nav.header__nav
+        ul.socials
+          each social in socials
+            li.socials__item
+              a(href=social.link class=`socials__link socials__link_${social.icon}` target="_blank" title=social.name)= social.name
+        ul.nav-menu
+          svg.nav-menu__icon
+            use(xlink:href="assets/images/sprite.svg#hamburger")
+          // each link in nav
+            // li.nav-menu__item
+              // a(href=link.url)= link.name
+      section.hero
+        img(src="assets/api/user-data/images/dm-avatar.jpg")
+        h1 #{title}
+        .description Статьи, которые я написал
+    .content
+      aside menu
+      main
+        article
+          h2 Самое важное в SASS
   include shared/_footer
