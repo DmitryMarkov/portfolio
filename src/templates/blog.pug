@@ -21,9 +21,22 @@ block content
         img(src="assets/api/user-data/images/dm-avatar.jpg")
         h1 #{title}
         .description Статьи, которые я написал
+      section.triangles
+        .triangles__item.triangles__item-left
+          svg(viewbox="0 0 1000 110" preserveAspectRatio="none").triangles__triangle
+            polygon(points="0,0 0,110 1000, 110")
+        .triangles__item.triangles__item-right
+          svg(viewbox="0 0 1000 110" preserveAspectRatio="none").triangles__triangle
+            polygon(points="0,110 1000,110 1000,0")
     .content
-      aside menu
+      aside
+        ul.side-nav
+          each article in articles
+            li.side-nav__item=article.name
       main
-        article
-          h2 Самое важное в SASS
+        each article in articles
+          article
+            h2=article.name
+            .date=article.date
+            .text!=article.content
   include shared/_footer
