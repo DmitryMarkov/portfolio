@@ -6,7 +6,7 @@
     {
       "name": "Twitter",
       "link": "//twitter.com/damarkov",
-      "icon": "twitter"
+      "icon": "vk"
     },
     {
       "name": "GitHub",
@@ -16,7 +16,25 @@
     {
       "name": "Behance",
       "link": "//www.behance.net/damarkov",
-      "icon": "behance"
+      "icon": "in"
+    }
+  ],
+  "nav": [
+    {
+      "name": "Мои работы",
+      "url": "works.html"
+    },
+    {
+      "name": "Обо мне",
+      "url": "about.html"
+    },
+    {
+      "name": "Блог",
+      "url": "blog.html"
+    },
+    {
+      "name": "Авторизация",
+      "url": "login.html"
     }
   ]
 }

@@ -1,0 +1,46 @@
+.footer
+  background:
+    color: rgba($color-header, .85)
+  position: absolute
+  bottom: 0
+  left: 0
+  right: 0
+  color: rgba(white, .5)
+
+  &__row
+    // @extend %clearfix
+    padding: 10px 20px
+    display: flex
+    justify-content: center
+    align-items: center
+
+    &:not(:last-child)
+      border-bottom: 1px solid rgba(white, .1)
+
+  &__nav
+    display: flex
+    flex: 1
+    align-items: center
+
+    > ul
+      display: flex
+
+      &:last-child
+        margin-left: auto
+
+      > li
+        margin-right: 30px
+
+        &:last-child
+          margin-right: 0
+
+  a
+    color: white
+    text-decoration: none
+
+  .about
+    &__item
+      flex: 1
+
+      &:last-child
+        text-align: right

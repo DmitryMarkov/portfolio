@@ -1,5 +1,15 @@
 footer.footer
-  .footer_row
+  .footer__row
     nav.footer__nav
-      ul
-        | link
+      ul.nav-menu
+        each link in nav
+          li.nav-menu__item
+            a(href=link.url)= link.name
+      ul.socials
+        each social in socials
+          li.socials__item
+            a(href=social.link class=`socials__link socials__link_${social.icon}` target="_blank" title=social.name)= social.name
+  .footer__row.about
+    .about__item Я &mdash; веб-разработчик и сделал этот сайт в рамках обучения в Школе онлайн-образования LoftSchool
+    .about__item &copy; Дмитрий Марков | создано для LoftSchool | 2017
+

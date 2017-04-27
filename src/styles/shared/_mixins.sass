@@ -11,6 +11,9 @@
   @if $breakpoint == tablet
     @media (max-width: $responsive-tablet)
       @content
+  @if $breakpoint == laptop
+    @media (max-width: $responsive-laptop)
+      @content
   @if $breakpoint == desktop
     @media (max-width: $responsive-desktop)
       @content
@@ -32,7 +35,7 @@
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 // Extends
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
-%clerafix
+%clearfix
   &:after
     content: ""
     display: block
